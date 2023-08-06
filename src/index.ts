@@ -12,7 +12,7 @@ export default {
 		const url = new URL(request.url);
 		if (url.pathname === '/favicon.ico') return new Response(null, { status: 404 });
 
-		var client = new Client(env.DB_URL);
+		const client = new Client(env.DB_URL);
 		await client.connect();
 
 		// Query the RNA database!
